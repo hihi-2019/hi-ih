@@ -3,11 +3,18 @@ import request from "superagent"
 
 export function getUsers(){
    return request.get('/api/v1/')
+
+   .then(res => res.body)
+    
+}
+
+
 }
 
 export function getAllPokemon(){
     return request.get('/api/v1/pokemon')
     // .then(res => res.body.results)
+
 }
 
 
