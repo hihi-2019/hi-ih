@@ -22,9 +22,20 @@ router.post('/user/:id/:pokeName', (req, res) => {
   let pokeName = req.params.pokeName
 
   db.addPokemon(id, pokeName)
-  .then(x => console.log(id, pokeName))
+  .then(x => x)
 
 })
+
+
+router.delete('/user/:id/:pokeName', (req, res) => {
+  let id = req.params.id
+  let pokeName = req.params.pokeName
+
+  db.deletePokemon(id, pokeName)
+  .then(x => x)
+})
+
+
 
 // router.get('users/:id/:pokeName', (req, res) => {
 //   const id = req.params.id
