@@ -11,4 +11,18 @@ router.get('/', (req, res) => {
   })
 })
 
+router.get('/:url', (req, res) => {
+  request.get(url)
+  .then(pokemon => {
+    const pokeObj = pokemon.body
+    res.json({
+      name: pokeObj.name,
+      abilities: pokeObj.abilities,
+      type: pokeObj.types[0].type.name,
+      img: pokeObj.sprites.front_default,
+      weight: pokeObj.weight
+    })    
+  })
+})
+
 module.exports = router
