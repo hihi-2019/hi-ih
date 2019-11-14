@@ -2,7 +2,7 @@ const config = require('../../knexfile').development
 const connection = require('knex')(config)
 
 function getUsers(db = connection) {
-  return db('users')
+  return db('users').select()
  
 }
 
@@ -26,3 +26,5 @@ module.exports = {
   getUserPokemon,
   // getPokemon,
 }
+
+getUsers()
