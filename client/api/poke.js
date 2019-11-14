@@ -1,12 +1,9 @@
 import request from "superagent"
 
 
-export function getPokemon(id) {
-    return request.get(`http://pokeapi.co/api/v2/pokemon/${id}/`)
-        .then(res => res.json())
-        .then(data => {
-            const pokemon = new Pokemon(data)
-        })
+export function getUsers(){
+   return request.get('/api/v1/')
+    
 }
 
 export function getAllPokemon(){
@@ -14,6 +11,31 @@ export function getAllPokemon(){
     .then(res => res.body.results)
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// export function getPokemon(id) {
+//     return request.get(`http://pokeapi.co/api/v2/pokemon/${id}/`)
+//         .then(res => res.json())
+//         .then(data => {
+//             const pokemon = new Pokemon(data)
+//             console.log(pokemon)
+//         })
+// }
+
+// getPokemon(1)
 
 
 // class Pokemon {
@@ -24,5 +46,7 @@ export function getAllPokemon(){
 //       this.type = data.types[0].type.name;    
 //     }
 //   }
+
+
   
 //   export default Pokemon;
