@@ -8,7 +8,7 @@ exports.seed = (knex, promise) => {
         {userId: 1, name: 'Ethan', element: 'Champion'},
         {userId: 2, name: 'Freya', element: 'Biker'},
         {userId: 3, name: 'Cass', element: 'Biker'},
-        {userId: 4, name: 'Rob', element: 'Coll Trainer'},
+        {userId: 4, name: 'Rob', element: 'Cool Trainer'},
         {userId: 5, name: 'Alice', element: 'Blackbelt'},
         {userId: 6, name: 'Bas', element: 'Biker'},
         {userId: 7, name: 'Edgars', element: 'Hiker'},
