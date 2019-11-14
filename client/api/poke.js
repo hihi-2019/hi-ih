@@ -9,7 +9,10 @@ export function getPokemon(id) {
         })
 }
 
-
+export function getAllPokemon(){
+    return request.get('`http://pokeapi.co/api/v2/pokemon/?limit=200')
+    .then(res => res.body.results)
+}
 
 
 
