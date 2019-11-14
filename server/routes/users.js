@@ -12,6 +12,7 @@ router.get('/', (req, res) => {
 router.get('/users/:id', (req, res) => {
   db.getUserPokemon(req.params.id)
     .then(pokemon => {
+      console.log(pokemon)
       res.json(pokemon)
     })
 })

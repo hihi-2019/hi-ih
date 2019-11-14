@@ -18,7 +18,10 @@ export function getAllPokemon(){
 }
 
 
-
+export function getUserPokemon(id){
+    return request.get("/api/v1/users/"+id)
+    .then(res => res.body)
+}
 
 
 
