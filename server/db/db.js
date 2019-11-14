@@ -1,6 +1,6 @@
 const config = require('../../knexfile').development
 const db = require('knex')(config)
-const utils = require('./utils')
+// const utils = require('./utils')
 
 function getUsers(id) {
   return db('Users')
