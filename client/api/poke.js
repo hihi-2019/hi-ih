@@ -15,6 +15,7 @@ export function addPokemon(id, pokeName){
 }
 
 
+
 export function deleteAPokemon(id, pokeName){
     return request.delete('/api/v1/user/' + id + "/" + pokeName)
 }
