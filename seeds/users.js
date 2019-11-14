@@ -1,32 +1,32 @@
 
 exports.seed = (knex, promise) => {
   // Deletes ALL existing entries
-  return knex('Users').del()
+  return knex('users').del()
     .then(function () {
       // Inserts seed entries
-      return knex('Users').insert([
-        {userId: 1, name: 'Ethan', element: 'Champion'},
-        {userId: 2, name: 'Freya', element: 'Biker'},
-        {userId: 3, name: 'Cass', element: 'Biker'},
-        {userId: 4, name: 'Rob', element: 'Cool Trainer'},
-        {userId: 5, name: 'Alice', element: 'Blackbelt'},
-        {userId: 6, name: 'Bas', element: 'Biker'},
-        {userId: 7, name: 'Edgars', element: 'Hiker'},
-        {userId: 8, name: 'Caitlin', element: 'Bird Keeper'},
-        {userId: 9, name: 'Charlie', element: 'Psychic'},
-        {userId: 10, name: 'Cherise', element: 'Scientist'},
-        {userId: 11, name: 'Fraser', element: 'Rocker'},
-        {userId: 12, name: 'Joseph', element: 'Rocker'},
-        {userId: 13, name: 'Nisida', element: 'Cool Trainer'},
-        {userId: 14, name: 'Richard', element: 'Gentleman'},
-        {userId: 15, name: 'Sophie', element: 'Hiker'},
-        {userId: 16, name: 'Tosca', element: 'Hiker'},
-        {userId: 17, name: 'Vere', element: 'Burglar'},
-        {userId: 18, name: 'Ross', element: 'Gambler'},
-        {userId: 19, name: 'Kelly', element: 'Gambler'},
-        {userId: 20, name: 'Han', element: 'Gambler'},
-        {userId: 21, name: 'Ming', element: 'Gambler'},
-        {userId: 22, name: 'Ollie', element: 'Gambler'},
+      return knex('users').insert([
+        {user_id: 1, name: 'Ethan', element: 'Champion'},
+        {user_id: 2, name: 'Freya', element: 'Biker'},
+        {user_id: 3, name: 'Cass', element: 'Biker'},
+        {user_id: 4, name: 'Rob', element: 'Cool Trainer'},
+        {user_id: 5, name: 'Alice', element: 'Blackbelt'},
+        {user_id: 6, name: 'Bas', element: 'Biker'},
+        {user_id: 7, name: 'Edgars', element: 'Hiker'},
+        {user_id: 8, name: 'Caitlin', element: 'Bird Keeper'},
+        {user_id: 9, name: 'Charlie', element: 'Psychic'},
+        {user_id: 10, name: 'Cherise', element: 'Scientist'},
+        {user_id: 11, name: 'Fraser', element: 'Rocker'},
+        {user_id: 12, name: 'Joseph', element: 'Rocker'},
+        {user_id: 13, name: 'Nisida', element: 'Cool Trainer'},
+        {user_id: 14, name: 'Richard', element: 'Gentleman'},
+        {user_id: 15, name: 'Sophie', element: 'Hiker'},
+        {user_id: 16, name: 'Tosca', element: 'Hiker'},
+        {user_id: 17, name: 'Vere', element: 'Burglar'},
+        {user_id: 18, name: 'Ross', element: 'Gambler'},
+        {user_id: 19, name: 'Kelly', element: 'Gambler'},
+        {user_id: 20, name: 'Han', element: 'Gambler'},
+        {user_id: 21, name: 'Ming', element: 'Gambler'},
+        {user_id: 22, name: 'Ollie', element: 'Gambler'},
       ]);
     });
 };

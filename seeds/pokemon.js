@@ -1,61 +1,61 @@
 
 exports.seed = (knex, promise) => {
   // Deletes ALL existing entries
-  return knex('Pokemon').del()
+  return knex('pokemon').del()
     .then(function () {
       // Inserts seed entries
-      return knex('Pokemon').insert([
-        {pokeId: 1, userId: 3},   //bulbasaur
-        {pokeId: 3, userId: 7},   //ivysaur
-        {pokeId: 4, userId: 4},   //charmander
-        {pokeId: 6, userId: 1},   //charizard
-        {pokeId: 7, userId: 3},   //squirtle
-        {pokeId: 9, userId: 1},   //blastoise
-        {pokeId: 10, userId: 8},  //caterpie
-        {pokeId: 11, userId: 15},  //metapod
-        {pokeId: 12, userId: 13},  //butterfree
-        {pokeId: 13, userId: 7},  //weedle
-        {pokeId: 14, userId: 14},  //kakuna
-        {pokeId: 15, userId: 18},  //beedrill
-        {pokeId: 16, userId: 8},  //pidgey
-        {pokeId: 17, userId: 10},  //pidgeotto
-        {pokeId: 18, userId: 8},  //pidgeot
-        {pokeId: 19, userId: 22},  //rattata
-        {pokeId: 20, userId: 18},  //raticate
-        {pokeId: 21, userId: 20},  //spearow
-        {pokeId: 22, userId: 21},  //fearow
-        {pokeId: 23, userId: 17},  //ekans
-        {pokeId: 24, userId: 17},  //arbok
-        {pokeId: 25, userId: 5},  //pikachu
-        {pokeId: 26, userId: 16},  //raichu
-        {pokeId: 27, userId: 16},  //sandshrew
-        {pokeId: 28, userId: 19},  //sandslash
-        {pokeId: 35, userId: 20},  //clefariy
-        {pokeId: 36, userId: 21},  //clefable
-        {pokeId: 37, userId: 15},  //vulpix
-        {pokeId: 38, userId: 5},  //ninetales
-        {pokeId: 39, userId: 1},  //jigglypuff
-        {pokeId: 40, userId: 2},  //wigglytuff
-        {pokeId: 41, userId: 6},  //zubat
-        {pokeId: 42, userId: 12},  //golbat
-        {pokeId: 43, userId: 13},  //oddish
-        {pokeId: 44, userId: 2},  //gloom
-        {pokeId: 45, userId: 11},  //vileplume
-        {pokeId: 46, userId: 4},  //paras
-        {pokeId: 47, userId: 18},  //parasect
-        {pokeId: 48, userId: 14},  //venonat
-        {pokeId: 49, userId: 7},  //venomoth
-        {pokeId: 50, userId: 9},  //diglett
-        {pokeId: 51, userId: 11},  //dugtrio
-        {pokeId: 52, userId: 17},  //meowth
-        {pokeId: 53, userId: 18},  //persian
-        {pokeId: 54, userId: 20},  //psyduck
-        {pokeId: 55, userId: 19},  //golduck
-        {pokeId: 56, userId: 15},  //mankey
-        {pokeId: 57, userId: 22},  //primeape
-        {pokeId: 58, userId: 9},  //growlithe
-        {pokeId: 59, userId: 13},  //arcanine
-        {pokeId: 60, userId: 12},  //poliwag
+      return knex('pokemon').insert([
+        { poke_id: 1, user_id: 'bulbasaur' },
+        { poke_id: 3, user_id: 'ivysaur' },
+        { poke_id: 4, user_id: 'charmander' },
+        { poke_id: 6, user_id: 'charizard' },
+        { poke_id: 7, user_id: 'squirtle' },
+        { poke_id: 9, user_id: 'blastoise' },
+        { poke_id: 10, user_id: 'caterpie' },
+        { poke_id: 11, user_id: 'metapod' },
+        { poke_id: 12, user_id: 'butterfree' },
+        { poke_id: 13, user_id: 'weedle' },
+        { poke_id: 14, user_id: 'kakuna' },
+        { poke_id: 15, user_id: 'beedrill' },
+        { poke_id: 16, user_id: 'pidgey' },
+        { poke_id: 17, user_id: 'pidgeotto' },
+        { poke_id: 18, user_id: 'pidgeot' },
+        { poke_id: 19, user_id: 'rattata' },
+        { poke_id: 20, user_id: 'raticate' },
+        { poke_id: 21, user_id: 'spearow' },
+        { poke_id: 22, user_id: 'fearow' },
+        { poke_id: 23, user_id: 'ekans' },
+        { poke_id: 24, user_id: 'arbok' },
+        { poke_id: 25, user_id: 'pikachu' },
+        { poke_id: 26, user_id: 'raichu' },
+        { poke_id: 27, user_id: 'sandshrew' },
+        { poke_id: 28, user_id: 'sandslash' },
+        { poke_id: 35, user_id: 'clefariy' },
+        { poke_id: 36, user_id: 'clefable' },
+        { poke_id: 37, user_id: 'vulpix' },
+        { poke_id: 38, user_id: 'ninetales' },
+        { poke_id: 39, user_id: 'jigglypuff' },
+        { poke_id: 40, user_id: 'wigglytuff' },
+        { poke_id: 41, user_id: 'zubat' },
+        { poke_id: 42, user_id: 'golbat' },
+        { poke_id: 43, user_id: 'oddish' },
+        { poke_id: 44, user_id: 'gloom' },
+        { poke_id: 45, user_id: 'vileplume' },
+        { poke_id: 46, user_id: 'paras' },
+        { poke_id: 47, user_id: 'parasect' },
+        { poke_id: 48, user_id: 'venonat' },
+        { poke_id: 49, user_id: 'venomoth' },
+        { poke_id: 50, user_id: 'diglett' },
+        { poke_id: 51, user_id: 'dugtrio' },
+        { poke_id: 52, user_id: 'meowth' },
+        { poke_id: 53, user_id: 'persian' },
+        { poke_id: 54, user_id: 'psyduck' },
+        { poke_id: 55, user_id: 'golduck' },
+        { poke_id: 56, user_id: 'mankey' },
+        { poke_id: 57, user_id: 'primeape' },
+        { poke_id: 58, user_id: 'growlithe' },
+        { poke_id: 59, user_id: 'arcanine' },
+        { poke_id: 60, user_id: 'poliwag' },
 
 
 
@@ -76,7 +76,7 @@ exports.seed = (knex, promise) => {
 
 
 
-        
+
 
 
 
