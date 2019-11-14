@@ -14,7 +14,15 @@ function getUserPokemon(id, db = connection) {
 }
 
 
-// function getPokemon(id, pokeId) {
+function addPokemon(id, pokeName, db = connection) {
+  return db('pokemon')
+  .insert({
+    user_id: id,
+    poke_name: pokeName
+  })
+}
+
+// function getPokemon(id, pokeName) {
 //   return db('users')
 //     .where('id', id)
 //     .select('pokemon_name', 'pokemon_type', 'pokemon_level')
@@ -24,6 +32,7 @@ function getUserPokemon(id, db = connection) {
 module.exports = {
   getUsers,
   getUserPokemon,
+  addPokemon,
   // getPokemon,
 }
 
