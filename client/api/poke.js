@@ -3,18 +3,20 @@ import request from "superagent"
 
 export function getUsers(){
    return request.get('/api/v1/')
-
    .then(res => res.body)
-    
-}
-
-
 }
 
 export function getAllPokemon(){
     return request.get('/api/v1/pokemon')
-    // .then(res => res.body.results)
+}
 
+export function addPokemon(id, pokeName){
+    return request.post('/api/v1/user/' + id + "/" + pokeName)
+}
+
+
+export function deleteAPokemon(id, pokeName){
+    return request.delete('/api/v1/user/' + id + "/" + pokeName)
 }
 
 
