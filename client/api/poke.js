@@ -3,12 +3,11 @@ import request from "superagent"
 
 export function getUsers(){
    return request.get('/api/v1/')
-    
 }
 
 export function getAllPokemon(){
-    return request.get('`http://pokeapi.co/api/v2/pokemon/?limit=200')
-    .then(res => res.body.results)
+    return request.get('/api/v1/pokemon')
+    // .then(res => res.body.results)
 }
 
 
