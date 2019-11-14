@@ -9,7 +9,7 @@ export function getUsers(){
 }
 
 
-}
+
 
 export function getAllPokemon(){
     return request.get('/api/v1/pokemon')

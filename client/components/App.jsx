@@ -17,7 +17,6 @@ class App extends React.Component {
 
 
 componentDidMount() {
-  
   getUsers()
   .then(user => {
     this.setState({user})
@@ -33,7 +32,7 @@ componentDidMount() {
      <div>
       <Navbar/>
       <Route exact path="/" component={Home}/>
-      <Route exact 
+      <Route exact path="/:id" render={(props)=> <User {...props} user={this.state.user} />} />
       </div>
     </Router>
   
