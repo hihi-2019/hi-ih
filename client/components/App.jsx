@@ -33,6 +33,7 @@ componentDidMount() {
      <div>
       <Navbar/>
       <Route exact path="/" component={Home}/>
+      <Route exact 
       </div>
     </Router>
   
