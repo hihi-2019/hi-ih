@@ -1,29 +1,28 @@
 const config = require('../../knexfile').development
-const db = require('knex')(config)
-// const utils = require('./utils')
+const connection = require('knex')(config)
 
-function getUsers(id) {
-  return db('Users')
-  .where('id', id)
-  .first()
+function getUsers(db = connection) {
+  return db('users')
+ 
 }
 
 
-function getAllPokemon() {
+function getUserPokemon(id, db = connection) {
   return db('pokemon')
-  .select()
+    .select()
+    .where('user_id', id)
 }
 
 
-function getPokemon(id, pokeId) {
-  return db('Users')
-  .where('id', id)
-  .select('pokemon_name', 'pokemon_type', 'pokemon_level')
-  // Do I need to map through these to get them all?
-}
+// function getPokemon(id, pokeId) {
+//   return db('users')
+//     .where('id', id)
+//     .select('pokemon_name', 'pokemon_type', 'pokemon_level')
+//   // Do I need to map through these to get them all?
+// }
 
 module.exports = {
   getUsers,
-  getAllPokemon,
-  getPokemon,
+  getUserPokemon,
+  // getPokemon,
 }
