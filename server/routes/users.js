@@ -9,18 +9,27 @@ router.get('/', (req, res) => {
     })
 })
 
-router.get('users/:id', (req, res) => {
+router.get('/users/:id', (req, res) => {
   db.getUserPokemon(req.params.id)
     .then(pokemon => {
       res.json(pokemon)
     })
 })
 
-// router.get('users/:id/:pokeId', (req, res) => {
-//   const id = req.params.id
-//   const pokeId = req.params.pokeId
+router.post('/user/:id/:pokeName', (req, res) => {
+  let id = req.params.id
+  let pokeName = req.params.pokeName
 
-//   db.getPokemon(id, pokeId)
+  db.addPokemon(id, pokeName)
+  .then(x => console.log(id, pokeName))
+
+})
+
+// router.get('users/:id/:pokeName', (req, res) => {
+//   const id = req.params.id
+//   const pokeName = req.params.pokeName
+
+//   db.getPokemon(id, pokeName)
 //   .then(pokemon =>{
 //     res.json(pokemon)
 //   })
