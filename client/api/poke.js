@@ -42,6 +42,7 @@ export function getUserPokemon(id){
 
 
 
+
 // export function getPokemon(id) {
 //     return request.get(`http://pokeapi.co/api/v2/pokemon/${id}/`)
 //         .then(res => res.json())
