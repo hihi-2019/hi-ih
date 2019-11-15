@@ -33,27 +33,27 @@ class Pokemon extends React.Component {
         })
         console.log(this.state.pokemon.abilities)
       })
-    }
-      // getPokeInfo(this.props.url, pokeName)
-    
+  }
+  // getPokeInfo(this.props.url, pokeName)
 
-    render() {
-      let abilitiesArr = this.state.pokemon.abilities
-      return(
-        <React.Fragment >
-          <h1>{this.state.pokemon.name}</h1>
-          <img src={this.state.pokemon.img}></img>
-          <ul>
-            <li>Type: {this.state.pokemon.type}</li>
-            <li>Weight: {this.state.pokemon.weight}kg</li>
-          </ul>
-          <h3>Abilities</h3>
-          <ul>
-            {abilitiesArr.map((x) => {return <li>{x.ability.name}</li>})}
-          </ul>
 
-        </React.Fragment >
-      )
+  render() {
+    let abilitiesArr = this.state.pokemon.abilities
+    return (
+      <React.Fragment >
+        <h1>{this.state.pokemon.name}</h1>
+        <img src={this.state.pokemon.img} width="30%"></img>
+        <ul>
+          <li>Type: {this.state.pokemon.type}</li>
+          <li>Weight: {this.state.pokemon.weight}kg</li>
+        </ul>
+        <h3>Abilities</h3>
+        <ul>
+          {abilitiesArr.map((x) => { return <li>{x.ability.name}</li> })}
+        </ul>
+
+      </React.Fragment >
+    )
   }
 }
 
