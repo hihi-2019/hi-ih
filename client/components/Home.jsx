@@ -18,8 +18,8 @@ componentDidMount() {
   getUsers()
   .then(user => {
     this.setState({user})
-    console.log("im here")
-    console.log(this.state.user)
+    // console.log("im here")
+    // console.log(this.state.user)
     
   })
 }
