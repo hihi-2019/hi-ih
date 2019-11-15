@@ -9,7 +9,7 @@ function getUsers(db = connection) {
 
 function getUserPokemon(id, db = connection) {
   return db('pokemon')
-    .select()
+  .select()
     .where('user_id', id)
 }
 

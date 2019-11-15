@@ -23,7 +23,8 @@ export function deleteAPokemon(id, pokeName){
 
 export function getUserPokemon(id){
     return request.get("/api/v1/users/"+id)
-    .then(res => res.body)
+    // .then(res => console.log(res))
+
 }
 
 
