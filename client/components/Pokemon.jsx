@@ -7,7 +7,9 @@ class Pokemon extends React.Component {
     super(props)
 
     this.state = {
-      pokemon: {}
+      pokemon: {
+        abilities: []
+      }
     }
   }
 
@@ -29,33 +31,29 @@ class Pokemon extends React.Component {
             weight: pokeObj.weight
           }
         })
+        console.log(this.state.pokemon.abilities)
       })
-  }
-  // getPokeInfo(this.props.url, pokeName)
+    }
+      // getPokeInfo(this.props.url, pokeName)
+    
 
+    render() {
+      let abilitiesArr = this.state.pokemon.abilities
+      return(
+        <React.Fragment >
+          <h1>{this.state.pokemon.name}</h1>
+          <img src={this.state.pokemon.img}></img>
+          <ul>
+            <li>Type: {this.state.pokemon.type}</li>
+            <li>Weight: {this.state.pokemon.weight}kg</li>
+          </ul>
+          <h3>Abilities</h3>
+          <ul>
+            {abilitiesArr.map((x) => {return <li>{x.ability.name}</li>})}
+          </ul>
 
-  render() {
-    let abilitiesArray = this.state.pokemon.abilities
-    console.log(abilitiesArray)
-    return (
-      <React.Fragment >
-        <h1>hello</h1>
-        <img src={this.state.pokemon.img}></img>
-        <ul>
-          <li>{this.state.pokemon.name}</li>
-          <li>{this.state.pokemon.type}</li>
-
-          <li>{this.state.pokemon.weight}</li>
-        </ul>
-        <ul>{abilitiesArray.map(x => {
-          return <li>x.ability.name</li>
-        })}</ul>
-        {/* <ul>
-          {this.state.pokemon.abilities}.map(x => return <li>x.ability.name</li>)
-          </ul> */}
-
-      </React.Fragment >
-    )
+        </React.Fragment >
+      )
   }
 }
 
