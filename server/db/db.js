@@ -23,6 +23,12 @@ function addPokemon(id, pokeName, db = connection) {
 }
 
 
+function getPokemon(pokeName, db = connection) {
+  return db('pokemon')
+  .where('poke_name', pokeName)
+  .first()
+}
+
 function deletePokemon(id, pokeName, db = connection) {
   return db('pokemon')
   .where('user_id', id)
@@ -43,6 +49,7 @@ module.exports = {
   getUserPokemon,
   addPokemon,
   deletePokemon,
+  getPokemon,
   // getPokemon,
 }
 

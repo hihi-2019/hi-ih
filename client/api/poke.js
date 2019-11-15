@@ -20,13 +20,16 @@ export function deleteAPokemon(id, pokeName){
     return request.delete('/api/v1/user/' + id + "/" + pokeName)
 }
 
+export function getPokeInfo(pokeName){
+    return request.get('https://pokeapi.co/api/v2/pokemon/' + pokeName)
+}
+
 
 export function getUserPokemon(id){
     return request.get("/api/v1/users/"+id)
     // .then(res => console.log(res))
 
 }
-
 
 
 
