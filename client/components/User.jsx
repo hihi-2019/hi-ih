@@ -1,6 +1,7 @@
 import React from 'react'
 import { getUserPokemon } from '../api/poke'
 import { Link } from 'react-router-dom'
+import CatchForm from './CatchForm'
 
 class User extends React.Component {
     constructor(props) {
@@ -8,6 +9,7 @@ class User extends React.Component {
 
         this.state = {
             pokemon: [],
+            showForm: false
         }
     }
 
@@ -23,25 +25,29 @@ class User extends React.Component {
 
     }
 
+    toggleForm = () => {
+        this.setState({
+            showForm: !this.state.showForm
+        })
+    }
 
     render() {
-        const user = this.props.user.find(user => {
-            return user.user_id == this.props.match.params.id
+        const selectedUser = this.props.user.find(user => {
+            return user && user.user_id == this.props.match.params.id
         })
-        // console.log("This is the user id" + user.user_id)
-        const url = "/users/" + user.user_id + "/"
-        console.log(url)
 
-        return (
+        return (selectedUser ? (
             <div>
-                <h1>{user && user.name}</h1>
+                <h1>{selectedUser.name}</h1>
+                <button onClick={this.toggleForm}>Catch a pokemon</button>
+                {this.state.showForm && <CatchForm/>}
                 <div className="container">
                     <div className="row">
                         {this.state.pokemon.map(pokemon => {
                             return <>
                                 <div className="col-sm-5">
-                                    <Link to={`${url}${pokemon.poke_name}`}>
-                                        <img className="poke-img" src="https://cdn.shopify.com/s/files/1/1756/9559/products/pokeball_coaster_photo_33c69500-8564-4842-a2a7-3803975a2d3b_480x480.jpg?v=1557064432" />
+                                    <Link to={`${"/users/" + selectedUser.user_id + "/"}${pokemon.poke_name}`}>
+                                        <img className="poke-img" src="/images/pokeball.png" />
                                         <p>
                                             {pokemon.poke_name}
                                         </p>
@@ -53,7 +59,7 @@ class User extends React.Component {
                 </div>
 
             </div>
-        )
+        ) : "")
     }
 }
 

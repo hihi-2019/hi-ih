@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import { getUsers } from '../api/poke'
 import Home from './Home'
 import User from './User'
+import CatchForm from './CatchForm'
 import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import Pokemon from './Pokemon';
 
@@ -18,6 +19,7 @@ class App extends React.Component {
 
 
 componentDidMount() {
+  console.log('cdm')
   getUsers()
   .then(user => {
     console.log(user)
