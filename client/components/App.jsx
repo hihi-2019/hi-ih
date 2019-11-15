@@ -20,6 +20,7 @@ class App extends React.Component {
 componentDidMount() {
   getUsers()
   .then(user => {
+    console.log(user)
     this.setState({user})
   })
 }
