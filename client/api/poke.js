@@ -25,6 +25,17 @@ export function getPokeInfo(pokeName){
 }
 
 
+export function getUserPokemon(id){
+    return request.get("/api/v1/users/"+id)
+    // .then(res => console.log(res))
+
+}
+
+
+
+
+
+
 
 
 
