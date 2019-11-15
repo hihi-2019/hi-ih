@@ -28,18 +28,28 @@ componentDidMount() {
 
   render() {
    let userArray = this.state.user
-   let userId = this.state.user.userId
   
   return (
     <div>
       <h1>Pokemon</h1>
+      <div className="container">
+      <div className='row'>
       {userArray.map(user =>{
        return <> 
-       <Link to={'/'+user.userId} user={user.id}><p>{user.name}</p></Link>
-       <a href="#"><p>{user.name}</p></a>
-       <img src="/images/picture.jpg" width="30" height="30"/>
+         
+           <div className="col-sm-3">
+            <Link to={'/'+user.user_id} user={user.id}><p>{user.name}</p></Link>
+            <img src="/images/picture.jpg" width="150" height="150"/>
+           </div>
+        
+        
+       
+       
        </> 
       })}
+      </div>
+      </div>
+      
       
     </div>
    
