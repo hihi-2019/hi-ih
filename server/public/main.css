@@ -1,7 +1,15 @@
 .poke-img{
-    width: 70%;
+    width: 60%;
 }
 
-body{
-    
+h2 {
+    text-align: center;
 }
+
+body { 
+    background: url("http://eskipaper.com/images/pokemon-backgrounds-8.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }

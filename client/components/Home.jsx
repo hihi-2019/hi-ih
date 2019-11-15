@@ -39,7 +39,7 @@ componentDidMount() {
          
            <div className="col-sm-3">
             <Link to={'/'+user.user_id} user={user.id}><p>{user.name}</p></Link>
-            <img src="/images/picture.jpg" width="150" height="150"/>
+            <img src="/images/trainer.png" width="150" height="150"/>
            </div>
         
         
