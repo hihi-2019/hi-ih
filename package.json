@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "express": "^4.16.4",
-    "knex": "^0.20.1",
+    "knex": "^2.4.0",
     "nodemon": "^1.19.4",
     "react-router-dom": "^5.1.2",
     "sqlite3": "^4.1.0",
